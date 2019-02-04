@@ -1,0 +1,116 @@
+Testing - Inorder to make sure that the application is working according to customer's requirement, we have to perform testing.
+
+Automation - Performing any task using a tool or machine is automation.
+
+Testing the functionalities of tool is Automation testing.
+
+Advantages of Automation :
+1) Saves time.
+2) Faster.
+3) Less manual effort. 
+4) Less human resources.
+5) Restless.
+6) Multiple tasks.
+
+Disadvantages of Automation :
+1) Initial investment is more. - used only when the automation is Long Time Project (LTP).
+2) Requires additional skill sets.
+3) Constant maintenance.
+
+Selenium - It is a free, open source automation tool which is used to automate web-based applications and it supports 14 programming languages. It supports all browsers and OS.
+
+Advantages of Selenium :
+1) To make use of Selenium we don't have to buy any license. It is freely available in following website : https://www.seleniumhq.org/download/
+2) We can give the source code of Selenium which is available in following website - https://github.com/SeleniumHQ/selenium
+3) Using Selenium, we can automate web based application such as Facebook, Gmail, Flipkart etc.
+4) Selenium supports for 14 different programming languages.
+5) Selenium supports for multiple platforms such as Windows, Linux and Mac.
+6) Selenium supports for almost all browsers such as Firefox, Chrome, IE etc
+
+Architecture of Selenium :
+
+Tools for Automation :
+jdk(1.8 and above)
+Eclipse[Mars, Neon, Oxygen, Photon]
+Selenium jar file
+Driver executable files
+Latest version Browsers[chrome, Firefox]
+Application under testing
+Search context:
+findElement()
+findElements()
+
+Webdriver interface:
+get()   
+getTitle()  
+getCurrentUrl() 
+getPageSource() 
+findElement()   
+findElements()
+getWindowHandle()
+getWindowHandles()
+switchTo()
+manage()
+navigate()
+close()
+quit()
+
+Takescreenshot:
+getScreenShotAs()
+
+javascriptexecutor:
+executeScript()
+executeAsyncScript()
+
+download all driver files and jar file from the website : https://www.seleniumhq.org/downloads 
+extract all driver exe files
+in eclipse, create a new java project with name Automation
+under the java project, create two folders with the name - drivers and jars 
+Store all the extracted driver files under drivers folders
+Store selenium jar file in jars folder
+Associate the current jar file with current java project
+
+How to associate jar file with current java project : 
+Expand jars folder
+Right click, open jar file
+Go to build path
+Click on add to build path
+
+Before performing action on any elements, we have to perform following steps : 
+Inspect the element
+Identify/locate the element
+Find the element
+Perform the action
+
+Inspect the element :
+In Order to inspect the element, right click on the element
+Click on inspect element option which will return the source code of the element
+
+Note : For security purpose, in some of the applications right click option will be disabled. In such cases to inspect the element : 
+Press F12
+Click on inspect element icon
+Click on the element present on the web page
+
+Locators : 
+1)  Locators are the static methods which are used to identify the elements which are present on the web page.
+2) All these locators are present in a class called By which is a abstract class
+3) There are 8 types of Locators. All the locators takes the argument of type String
+4) The different types of locators are : 
+id(str)
+name(str)
+className(str)
+tagName(str)
+linkText(str)
+partialLinkText(str)
+css Selector(str)
+xPath(str)
+
+Note: Out of all the locators id, name, className are available as attributes of an element.
+
+To handle the single element, we use find element method.
+In find element method, if the specified locator is not matching with any elements, it will throw no such element exception.
+
+In find element method, if the specified locator is matching with multiple element then it returns address of first matching element.
+
+If the specified element is a link then we can identify that element by using the locator link text
+If the link is partially dynamic then we can identify that element by using partial link text

@@ -1,0 +1,131 @@
+Handling Listbox or Drop Down list :
+If the list box is developed by using select tag then we can handle the list box by using select class 
+Select class contains a constructor which takes an argument of type WebElement where in we have to pass address of the list box
+Select class contains different methods they are : 
+selectByindex(int)
+selectByValue(String)
+selectByVisibleText(String)
+deselectByIndex(int)
+deselectByValue(String)
+deselectByVisibleText(String)
+deselectAll()
+getAllSelectedOptions()
+getFirstSelectedOption
+getOptions()
+isMultiple
+
+Note: All the above methods are non static methods.
+
+Sample web page
+Ex: Write a script to select the options from the list box
+
+Note :
+Value and visible text are case-sensitive
+If we pass invalid arguments then it will throw no such element exception
+In single select list box if the specified option is duplicate then it will select first matching option
+We can handle the duplicate options by using index 
+In single select list box we cannot deselect the options
+If you try to deselect the options then it will throw Unsupported Operation Exception.
+
+Handling multi-select list box :
+Sample web page
+
+Write a script to select and deselect the options from the list box
+
+We can deselect all the selected options by using the method deSelectAll()
+ In multiselect listbox if the specified option is duplicated then it will select all the matching options
+We can handle the duplicate options by using the index
+
+Write a script to check whether the list box is single select or multi select list box
+We can check whether the list box is single select or multi select by using the method isMultiple()
+Ex: 
+
+Write a script to count and print all the selected options from the list box
+We can get all the selected options from the list box by using the method : getAllSelectedOptions()
+Ex: 
+
+Write a script to print the first selected option from the list box
+We can get the first selected option by using the method : getFirstSelectedOption()
+Ex: 
+
+Write a script to count and print all the options present in the list box
+We can get all the options from the list box by using getOptions method
+	Ex :
+
+Write a script to select all the options from the list box
+
+Write a script to select your DOB from the list box present in Facebook login or signup page
+
+Actions class :
+Actions is a class which is used to handle mouse actions
+Actions class contains a constructor which takes an argument of type webdriver
+
+Handling drop down menus :
+When we place the cursor on some elements, list of elements will be displayed
+These types of elements are called Drop down menus
+We can handle drop down menus by using moveToElement() of actions class
+
+Note: When we are performing any actions using actions class then it is mandatory to call perform method
+Ex :
+
+Handling drag and drop actions :
+We can handle drag and drop actions by using : dragAndDrop() method of actions class
+Drag and drop method takes 2 arguments of type webElement. They are :
+Source 
+Target
+Ex :
+
+Write a script to handle drag and drop action without using drop and drop method.
+How do you handle double click action
+We can handle double click action by using double click method of actions class.
+Ex:
+
+Context click :
+Right clicking on an element is called as Context click
+After right clicking on an element the options which are displayed are called as Context menus.
+We can handle right click action by using context click method of actions class.
+Ex:
+
+Set :
+Set is an interface which inherits from collection interface.
+Set is implemented by the classes
+Hash set
+Linked Hash Set
+Tree Set
+      3) In set:
+Duplicates are not allowed
+We can store null values - only once
+It doesn’t follow insertion order
+The datas will be stored randomly 
+It is not an indexed based collection 
+We can add the data by using add method 
+We can get the size by using size method
+We can remove the data by using remove method.
+
+Handling child browsers :
+Child browsers :
+We can handle child browsers by using get window handles method
+
+What is the difference between get window handle and get window handles method?
+
+
+getWindowHandle
+getWindowHandles
+The return type is String
+It returns address of parent window
+Ex
+The return type is Set of String
+It returns address of all the windows
+Ex
+
+Write a script to close all the windows without using quit method
+We can switch from one window to another window by using the statement : driver.switchTo().window()
+Ex:
+
+Write a script to print title of all the windows
+
+Write a script to close the specified window
+
+Write a script to switch the control to specific window
+
+Write a script to close only child browser

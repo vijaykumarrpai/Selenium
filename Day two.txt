@@ -1,0 +1,214 @@
+CSS Selector :
+If you cannot identify the elements by using id, name, className, tagName, linktext and partiallinktext then we can identify that element by using the locator CSS Selector. The syntax for CSS Selector is : 
+tagName[attributeName=’attributeValue’]
+input[type=’password’]
+
+     2) In order to verify the CSS Selector expression in FireFox browser : 
+Click on Try xPath icon
+Select querySelectorall option from the Way list box
+Specify the CSS Selector expression in expression field and click on enter
+
+Derive the CSS Selector expression for all the elements which are present in facebook login or signup page. Ex : input[type = ’email’]
+input[type = ‘password’]
+input[type = ‘text’]
+select[id='day']
+select[id='month']
+select[id='year']
+input[type='radio']
+button[id='u_0_11']
+input[aria-label='Log In']
+
+
+xPath :
+xPath is the  path of an element which is present on the webpage.
+There are two types of xPath. They are:
+Absolute xPath
+Relative xPath
+
+Sample web page:
+
+Absolute xPath: 
+Absolute xPath is the complete path of an element from the root of the web page(html)
+Absolute xPath is represented by using single forward slash which means immediate child
+Ex: 
+A: html/body/div[1]/input[1]
+B: html/body/div[1]/input[2]
+C: html/body/div[2]/input[1]
+D: html/body/div[2]/input[2]
+
+	AB: /html/body/div[1]/input
+	CD: html/body/div[2]/input
+	
+	AC: html/body/div/input[1]
+	BD: html/body/div/input[2]
+
+    		AD: html/body/div[1]/input[1] | html/body/div[2]/input[2]
+		BC: html/body/div[1]/input[2] | html/body/div[2]/input[1]
+
+		ABC: html/body/div[1]/input[1] | html/body/div[1]/input[2] | html/body/div[2]/input[1]
+		ABD: html/body/div[1]/input[1] | html/body/div[1]/input[2] | html/body/div[2]/input[2]
+		ACD: html/body/div[1]/input[1] | html/body/div[2]/input[1] | html/body/div[2]/input[2]
+BCD: html/body/div[1]/input[2] | html/body/div[2]/input[1] | html/body/div[2]/input[2]
+
+ABCD: html/body/div[1]/input[1] | html/body/div[1]/input[2] |  html/body/div[2]/input[1] | html/body/div[2]/input[2]
+
+Relative xPath :
+It represents the path of any element which is present on the web page.
+It is represented by using double forward slash which means any child
+Syntax:
+//tagName ---> all the matching elements
+//tagName[1] ---> all the 1st matching elements
+//tagName[last()] ---> all the last matching elements
+//* ---> all the elements
+
+Ex:
+A: //div[1]/input[1]
+B: //div[1]/input[2]
+C: //div[2]/input[1]
+D: //div[2]/input[2]
+
+AB: //div[1]/input
+		CD: //div[2]/input
+	
+		AC: //div/input[1]
+		BD: //div/input[2]
+
+    			AD: //div[1]/input[1] | //div[2]/input[2]
+			BC: //div[1]/input[2] | //div[2]/input[1]
+
+			ABC: //div[1]/input[1] | //div[1]/input[2] | //div[2]/input[1]
+			ABD: //div[1]/input[1] | //div[1]/input[2] | //div[2]/input[2]
+			ACD: //div[1]/input[1] | //div[2]/input[1] | ///div[2]/input[2]
+BCD: //div[1]/input[2] | //div[2]/input[1] | //div[2]/input[2]
+
+ABCD: //div[1]/input[1] | //div[1]/input[2] |  //div[2]/input[1] | //div[2]/input[2]
+
+What are the different types of xPath?
+Absolute xPath, Relative xPath
+
+      2) What is the difference between single forward slash and double forward slash?
+Single forward slash represents immediate child and double forward slash represents any child.
+3) Derive the XPath expression which matches with:
+All the links ---> //a
+All the images ---> //img
+
+XPath by attributes :
+In order to identify the required element, it may not work properly when we use the index values because whenever the position of the element changes its index value will also change.
+To overcome the above problem we use attributes in place of index values which is called as XPath by attributes.
+The syntax is : tagName[@attributeName = ‘attributeValue’]
+It is applicable for both absolute XPath and relative XPath
+Ex:
+Absolute ---> /html/body/div/input[@value = ‘B’]
+Relative ---> //input[@value = ‘B’]
+     5) We can pass multiple attributes by using OR operator
+	Ex: //input[@value = ‘B’ or @value = ‘C’]
+
+Derive the XPath expression to identify the elements which are present on the facebook login or signup page.
+Ex: Email or phone: //input[@type = ‘email’]
+//input[@type='password']
+//input[@type='text']
+//select[@id='day']
+//select[@id='month']
+//select[@id='year']
+//input[@type='radio']
+//button[@type='submit']
+//input[@type=’submit’]
+//input[@aria-label='Log In']
+
+XPath by text :
+If the specified element doesn’t contain any attributes and if it contains the text then we can identify the element by using XPath by text.
+The syntax is : tagName[text() = ‘textValue’]
+It is applicable for both absolute XPath and Relative XPath
+Ex : //td[text() = ‘Java’]
+      4) Text function can be represented by using dot
+Ex: //td[. = ‘Java’]
+
+Note : Attributes values and text values are case sensitive and space sensitive.
+
+Derive the XPath to identify the following elements which are present in selenium download page
+C# ---> //td[text()='C#']
+Ruby ---> //td[text()=’Ruby’]
+Python ---> //td[text()=’Python’]
+JavaScript(Node) ---> //td[text()=’JavaScript(Node)’]
+
+Note : Out of 8 Locators the preferred locators are :
+Id
+Name
+Linktext
+XPath
+1) Absolute
+2) Relative
+By attribute
+By text
+
+How do you get text of an element?
+Anything which is present in between opening tag and closing tag is called as text
+We can get text of an element by using a method called getText()
+
+Collection :
+A group of individual objects as a single entity is called as Collection.
+
+Collection FrameWork :
+To store group of individual objects we need classes and interfaces and those classes and interfaces are available in collection framework.
+
+In collection, we have an interface called Collection which is inherited by other interfaces such as list, queue and set.
+
+List : List is an interface which is implemented by the classes :
+Arraylist
+Linked list
+Vector
+
+In list, 
+Duplicates are allowed
+Null values are allowed
+It follows insertion order
+It’s an index based collection
+
+In list,
+We can add the data using add method
+We can get the size using size method
+Get the data using get method
+The return type of get method depends on type of the datas which are stored in the list.
+Ex: 
+
+Handling multiple elements : 
+We can handle multiple elements by using FindElements method
+The return type of FindElements method is list of web elements 
+In FindElements method if the specified locator is matching with multiple elements then it returns the address of all the matching elements
+In FindElements method, if the specified locator is not matching with any elements then it returns empty list (0)
+For FindElements method, the preferred locators are : 
+1) XPath
+2) Tagname
+
+Sample web page
+
+Write a script to count and print all the links present on the web page
+
+Synchronization :
+Matching the speed of Selenium with the speed of application is called as Synchronisation.
+We can handle the synchronization by using :
+1) Implicit wait
+
+
+Implicit wait : 
+Implicit wait is used to handle synchronization of findElement() and findElements() only.
+Implicit wait method takes 2 arguments of type long and time unit.
+The first argument is the waiting period and in the second argument we have to specify the time unit.
+The different time units are :
+1) Days
+2) Hours 
+3) Minutes
+4) Seconds
+5) Milliseconds
+6) Microseconds
+7) Nanoseconds
+
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+Work flow of Implicit wait :
+During the runtime when the control comes to find element method or find elements method, it will check whether the specified element is present or not.
+If the specified element is present it will return address of the matching elements otherwise it will check whether the implicitly wait method is specified or not.
+If implicitly wait method is not specified then it will throw not such element exception or empty list.
+If the emplcitly wait method is specified then it will check whether the specified time is over or not.
+If the specified time is over, then it will throw no such element exception or empty list else for every 500 milliseconds it will check whether the element is present or not.
+500 milliseconds is called as Polling Period.
